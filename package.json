@@ -1,0 +1,25 @@
+{
+  "devDependencies": {
+    "all-contributors-cli": "6.9.3",
+    "doctoc": "1.4.0",
+    "husky": "3.0.9"
+  },
+  "scripts": {
+    "ci-check": "npm run doctoc && npm run readme:generate",
+    "doctoc": "doctoc --maxlevel=3 README_SOURCE.md",
+    "readme:generate": "node generate-readme.js",
+    "contributors:check": "all-contributors check",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate",
+    "is-git-status-clean": "sh ./is-git-status-clean.sh"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run ci-check && npm run is-git-status-clean "
+    }
+  },
+  "dependencies": {
+    "react": "18.1.0",
+    "react-dom": "18.1.0"
+  }
+}

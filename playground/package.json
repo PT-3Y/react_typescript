@@ -1,0 +1,76 @@
+{
+  "name": "playground",
+  "description": "Playground Project for https://github.com/piotrwitek/react-redux-typescript-guide",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Piotr Witek <piotrek.witek@gmail.com> (http://piotrwitek.github.io/)",
+  "repository": "https://github.com/piotrwitek/react-redux-typescript-guide.git",
+  "license": "MIT",
+  "main": "src/index.tsx",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "reinstall": "rm -rf node_modules && npm install",
+    "ci-check": "npm run lint && npm run tsc && npm run test",
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
+    "tsc": "tsc -p ./ --noEmit",
+    "tsc:watch": "tsc -p ./ --noEmit -w",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "dependencies": {
+    "@lagunovsky/redux-react-router": "2.2.0",
+    "@testing-library/jest-dom": "5.16.4",
+    "@testing-library/react": "13.1.1",
+    "@testing-library/user-event": "13.5.0",
+    "@types/jest": "27.5.0",
+    "@types/node": "16.11.33",
+    "@types/react": "18.0.8",
+    "@types/react-dom": "18.0.3",
+    "@types/react-redux": "7.1.24",
+    "@types/react-router-dom": "5.3.3",
+    "axios": "0.26.1",
+    "cuid": "2.1.8",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-redux": "7.2.8",
+    "react-router-dom": "6.3.0",
+    "react-scripts": "5.0.1",
+    "redux": "4.1.2",
+    "redux-observable": "1.2.0",
+    "redux-thunk": "2.4.1",
+    "reselect": "4.0.0",
+    "rxjs": "6.5.3",
+    "tslib": "2.4.0",
+    "typesafe-actions": "5.1.0",
+    "utility-types": "3.10.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "5.2.5",
+    "@storybook/addon-links": "5.2.5",
+    "@storybook/addon-storyshots": "5.2.5",
+    "@storybook/addons": "5.2.5",
+    "@storybook/react": "5.2.5",
+    "@typescript-eslint/eslint-plugin": "5.22.0",
+    "@typescript-eslint/parser": "5.22.0",
+    "eslint": "8.14.0",
+    "eslint-config-prettier": "8.5.0",
+    "require-context.macro": "1.2.2",
+    "typescript": "4.6.4",
+    "web-vitals": "2.1.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
